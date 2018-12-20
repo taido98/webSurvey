@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Class Servay-Student</title>
+    <title>Class Servay-Teacher</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -46,7 +46,9 @@
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i> Thông báo </a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i> 
+                        Thông báo
+                    </a>
                     <ul class="dropdown-menu message-dropdown">
                         <li class="message-preview">
                             <a href="#">
@@ -106,7 +108,7 @@
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>  Nguyễn Tài Đô<b class="caret"></b></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>  Ngô Thị Duyên <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li>
                             <a href="file:///C:/Users/Asus/Desktop/learn/profile/profile.html"><i class="fa fa-fw fa-user"></i> Profile </a>
@@ -131,28 +133,16 @@
                         <a href="teacher.html"><i class="fa fa-fw fa-home mr-2"></i> Trang chủ</a>
                     </li>
                     <li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-list-ul"></i> Danh sách lớp học phần </a>
-                        <ul id="demo" class="collapse">
+                        <a></i> Ten mon hoc </a>
+                        <ul id="demo">
                             <li>
-                                <a href="#"> </i>INT 3302 1</a>
-                            
+                                <a onclick="openListStu()" style="cursor: pointer;"> Danh sách lớp học</a>
                             </li>
                             <li>
-                                <a href="#"> </i>INT 3302 3</a>
+                                <a href="view_result.html"> </i>Kết quả đánh giá</a>
                             </li>
                         </ul>
                     </li>
-                    <!-- <li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#demo_1"><i class="fa fa-fw fa-list-ul"></i> Phiếu khảo sát </a>
-                        <ul id="demo_1" class="collapse">
-                            <li>
-                                <a href="#"> </i>INT 3302 1</a>
-                            </li>
-                            <li>
-                                <a href="#"> </i>INT 3302 3</a>
-                            </li>
-                        </ul>
-                    </li> -->
                     <li>
                         <a href="#"><i class="fa fa-fw fa-users"></i> Diễn đàn</a>
                     </li>
@@ -165,79 +155,44 @@
 
             <div class="container-fluid">
 
-                <!-- Page Heading -->
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h1 class="page-header">
-                            Dashboard <small>Statistics Overview</small>
-                        </h1>
-                        <ol class="body">
-                            <form action="#search" id="search-1">
-                                <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Search courses..." aria-label="Search" aria-describedby="basic-addon2">
-                                    <div class="input-group-append">
-                                      <button class="btn btn-primary" type="button">
-                                        <i class="fa fa-fw fas fa-search"></i>
-                                      </button>
-                                    </div>
-                                  </div>
-                            </form>
-                            
-                        </ol>
-                    </div>
-                </div>
-                <!-- list course -->
-                <div class="wrapper1" id="list">
-                    <ul class="properties_list">
-                        <li>
-                            <a href="course_student.html">
-                                <div>
-                                    <img src="img/xulyanh.jpg" alt="" title="" class="property_img"/>
-                                    <span class="course">INT3304</span>
-                                <div class="property_details">
-                                    <h1><a href="course_student.html" class="name_course">Xử lý ảnh</a></h1>
-                                    <button type="button" class="btn btn-secondary btn-lg btn-block">Course</button>
-                                </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="course_student.html">
-                                <div>
-                                    <img src="img/thigiacmay.jpg" alt="" title="" class="property_img"/>
-                                    <span class="course">INT3412</span>
-                                <div class="property_details">
-                                    <h1><a href="course_student.html" class="name_course">Thị giác máy</a></h1>
-                                    <button type="button" class="btn btn-secondary btn-lg btn-block">Course</button>
-                                </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="course_student.html">
-                                <div>
-                                    <img src="img/xacsuatthongke.jpg" alt="" title="" class="property_img"/>
-                                    <span class="course">MAT1104</span>
-                                <div class="property_details">
-                                    <h1><a href="course_student.html" class="name_course">Xác suất thống kê</a></h1>
-                                    <button type="button" class="btn btn-secondary btn-lg btn-block">Course</button>
-                                </div>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- /list course -->
-
+            
 
             </div>
             <!-- /.container-fluid -->
-
         </div>
         <!-- /#page-wrapper -->
-
     </div>
     <!-- /#wrapper -->
+
+    <!-- list student -->
+    <div class="change_wrapper" id="tabListStu">
+        <form class="formList clearfix">
+            <h1 class="page-header">Danh sách sinh viên</h1>
+            <div class="col-8">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+            <th scope="col">#</th>
+            <th scope="col">Họ và tên</th>
+            <th scope="col">Mã SV</th>
+            <th scope="col">Vnumail</th>
+            <th scope="col" class="items">Khóa</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+            <th scope="row">1</th>
+            <td class="name-student">Nguyễn Tài Đô</td>
+            <td class="id-student">16020886</td>
+            <td class="vnu-mail">16020886@vnu.edu.vn</td>
+            <td class="items">QH-2016-I/CQ-CLC</td>
+                    </tr>
+                </tbody>
+            </table> 
+            </div>
+            <!-- /.Table -->    
+        </form>
+    </div>
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
@@ -245,7 +200,18 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
-   
+    <script>
+        function openListStu() {
+            document.getElementById("tabListStu").style.display = "block";
+        }
+        var list = document.getElementById("tabListStu");
+        window.onclick = function(event) {
+            if(event.target == list) {
+                list.style.display = "none";
+            }
+            
+        }
+    </script>
 
 </body>
 
